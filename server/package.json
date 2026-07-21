@@ -7,7 +7,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
