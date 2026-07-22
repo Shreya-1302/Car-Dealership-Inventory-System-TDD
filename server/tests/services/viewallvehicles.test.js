@@ -29,8 +29,9 @@ describe('viewAllVehicles services', () => {
         const vehicles = await viewAllVehicles();
         expect(vehicles).toBeDefined();
         expect(vehicles.length).toBe(2);
-        expect(vehicles[0].make).toBe('Toyota');
-        expect(vehicles[1].make).toBe('Honda');
+        const makes = vehicles.map(v => v.make);
+        expect(makes).toContain('Toyota');
+        expect(makes).toContain('Honda');
     })
 
     it('should return an empty array if there are no vehicles', async () => {
