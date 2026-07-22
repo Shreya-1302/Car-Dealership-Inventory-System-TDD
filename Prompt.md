@@ -211,4 +211,110 @@ Outlined the implementation of middleware responsible for securing protected rou
 
 Defined the authentication and role-based authorization middleware required to secure protected and admin-only routes.
 
+## Prompt 9
+
+### Prompt
+
+I need to implement the `addVehicle` service using TDD. The service should create a vehicle when valid data is provided and throw an error when required fields are missing. Guide me through the process without changing the expected behavior.
+
+### Key Answer
+
+Provided guidance for implementing the `addVehicle` feature using the TDD workflow.
+
+#### Step 1: RED Phase
+
+* Create a test file for the `addVehicle` service.
+* Write a test to verify that a vehicle is successfully created when all required fields are supplied.
+* Write a test to verify that an error is thrown when any mandatory field is missing.
+* Run the tests and confirm they fail initially.
+
+#### Step 2: GREEN Phase
+
+* Create the `addVehicle` service implementation.
+* Validate that all required vehicle fields are present.
+* Throw an appropriate error when validation fails.
+* Create and save a new vehicle record when validation succeeds.
+* Run the tests again and ensure they pass.
+
+#### Step 3: REFACTOR Phase
+
+* Improve code readability and structure where necessary.
+* Remove duplication and simplify logic.
+* Verify that all tests continue to pass after refactoring.
+
+### Outcome
+
+Implemented the `addVehicle` service with validation logic and database persistence while following the TDD cycle.
+## Prompt 10
+
+### Prompt
+
+I need to implement a `viewAllVehicles` service using TDD. The service should return all vehicles from the database and return an empty list when no vehicles exist. Guide me through the implementation process.
+
+### Key Answer
+
+Provided a TDD-based approach for implementing the `viewAllVehicles` service.
+
+#### Step 1: RED Phase
+
+* Create a test file for the `viewAllVehicles` service.
+* Write a test to verify that all stored vehicles are returned.
+* Write a test to verify that an empty array is returned when no vehicles exist.
+* Run the tests and confirm they fail initially.
+
+#### Step 2: GREEN Phase
+
+* Create the `viewAllVehicles` service.
+* Retrieve all vehicle records from the database using the Vehicle model.
+* Return the resulting collection of vehicles.
+* Execute the tests and ensure they pass.
+
+#### Step 3: REFACTOR Phase
+
+* Review the implementation for simplicity and readability.
+* Remove any unnecessary code.
+* Verify that all tests continue to pass after refactoring.
+
+### Outcome
+
+Implemented a service that retrieves all vehicle records while validating the behavior through automated tests following the TDD workflow.
+## Prompt 11
+
+### Prompt
+
+I need to implement an `updateVehicle` service using TDD. The service should update vehicle details for a valid ID and return an error when the vehicle does not exist or the ID is invalid. Guide me through the implementation process.
+
+### Key Answer
+
+Provided a TDD-based approach for implementing the `updateVehicle` service.
+
+#### Step 1: RED Phase
+
+* Create a test file for the `updateVehicle` service.
+* Write a test to verify that vehicle details are updated successfully for a valid ID.
+* Write a test to verify that an error is thrown when the vehicle does not exist.
+* Write a test to verify that an error is returned for missing or invalid IDs.
+* Run the tests and confirm they fail initially.
+
+#### Step 2: GREEN Phase
+
+* Create the `updateVehicle` service implementation.
+* Validate the provided vehicle ID.
+* Update the specified vehicle fields in the database.
+* Return the updated vehicle document.
+* Throw an error when no matching vehicle is found.
+* Run the tests and ensure they pass.
+
+#### Step 3: REFACTOR Phase
+
+* Review the implementation for clarity and maintainability.
+* Simplify logic where appropriate.
+* Verify that all tests continue to pass after refactoring.
+
+### Outcome
+
+Implemented vehicle update functionality with validation for invalid or non-existent IDs while following the TDD workflow.
+
+
+
 
