@@ -4,7 +4,7 @@ const viewAllVehiclesService = require('../../services/viewallvehicles');
 const searchVehiclesService = require('../../services/searchvehicles');
 const updateVehicleService = require('../../services/updatevehicle');
 const deleteVehicleService = require('../../services/deletevehicle');
-const purchaseVehicleService = require('../../services/purchasevehicle');
+const purchaseVehicleService = require('../../services/purchasevehicles');
 const restockVehicleService = require('../../services/restockvehicle');
 
 
