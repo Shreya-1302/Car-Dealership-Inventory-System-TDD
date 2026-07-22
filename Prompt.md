@@ -315,6 +315,43 @@ Provided a TDD-based approach for implementing the `updateVehicle` service.
 
 Implemented vehicle update functionality with validation for invalid or non-existent IDs while following the TDD workflow.
 
+## Prompt 12
+
+### Prompt
+
+I need to implement a `deleteVehicle` service using TDD. The service should delete a vehicle for a valid ID and throw an error when the vehicle does not exist or the ID is invalid. Guide me through the implementation process.
+
+### Key Answer
+
+Provided a TDD-based approach for implementing the `deleteVehicle` service.
+
+#### Step 1: RED Phase
+
+* Create a test file for the `deleteVehicle` service.
+* Write a test to verify that a vehicle is successfully deleted when a valid ID is provided.
+* Write a test to verify that an error is thrown when the vehicle does not exist.
+* Write a test to verify that an error is returned for missing or invalid IDs.
+* Run the tests and confirm they fail initially.
+
+#### Step 2: GREEN Phase
+
+* Create the `deleteVehicle` service implementation.
+* Validate the supplied vehicle ID.
+* Delete the corresponding vehicle record from the database.
+* Return the deleted vehicle document.
+* Throw an error when no matching vehicle is found.
+* Run the tests and ensure they pass.
+
+#### Step 3: REFACTOR Phase
+
+* Improve code readability and maintainability where necessary.
+* Remove any redundant logic.
+* Verify that all tests continue to pass after refactoring.
+
+### Outcome
+
+Implemented vehicle deletion functionality with proper validation and error handling while following the TDD workflow.
+
 
 
 
