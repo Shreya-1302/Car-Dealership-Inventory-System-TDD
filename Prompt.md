@@ -153,3 +153,32 @@ Then provided step-by-step guidance following the TDD approach:
 - Improve the implementation without changing its behavior.
 - Run all tests to ensure they continue to pass.
 
+## Prompt 7
+
+### Prompt
+
+Help me set up the initial authentication controller and routing structure for user registration and login.
+
+### Key Answer
+
+Generated the basic authentication layer consisting of:
+
+#### `src/controllers/authController.js`
+
+* Added controller methods for user registration and login.
+* Connected each method to the appropriate service function.
+* Returned JSON responses with suitable HTTP status codes.
+* Included basic error handling for failed operations.
+
+#### `src/routers/authRouter.js`
+
+* Created a dedicated Express router for authentication.
+* Configured the registration endpoint to invoke the register controller.
+* Configured the login endpoint to invoke the login controller.
+* Exported the router so it can be mounted in the application.
+
+### Outcome
+
+Established the authentication routing and controller structure, providing the entry points for registration and login functionality.
+
+
