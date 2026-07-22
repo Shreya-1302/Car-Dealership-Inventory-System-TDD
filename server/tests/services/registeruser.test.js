@@ -21,14 +21,8 @@ describe('registerUser service', () => {
         await mongoServer.stop();
     });
 
-    // Clean the database collections before each test run
     beforeEach(async () => {
-        if (mongoose.connection.readyState === 1) {
-            const collections = mongoose.connection.collections;
-            for (const key in collections) {
-                await collections[key].deleteMany();
-            }
-        }
+        await User.deleteMany({});
     });
 
     it('should create a user with hashed password', async () => {
