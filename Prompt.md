@@ -351,6 +351,121 @@ Provided a TDD-based approach for implementing the `deleteVehicle` service.
 ### Outcome
 
 Implemented vehicle deletion functionality with proper validation and error handling while following the TDD workflow.
+## Prompt 13
+
+### Prompt
+
+I need to implement a `searchVehicles` service using TDD. The service should support filtering by make, model, category, and price range. Searches should be case-insensitive for text fields, support combining multiple filters, and return an empty result when no vehicles match. Guide me through the implementation process.
+
+### Key Answer
+
+Provided a TDD-based approach for implementing the `searchVehicles` service.
+
+#### Step 1: RED Phase
+
+* Create a test file for the `searchVehicles` service.
+* Write tests for filtering by make, model, and category individually.
+* Write tests for minimum price, maximum price, and price range filters.
+* Write a test that combines multiple filters in a single search.
+* Write a test to verify an empty result is returned when no vehicles match.
+* Run the tests and confirm they fail initially.
+
+#### Step 2: GREEN Phase
+
+* Create the `searchVehicles` service implementation.
+* Build a query object dynamically based on the provided filters.
+* Use case-insensitive regular expressions for text-based searches.
+* Apply `$gte` and `$lte` operators for price range filtering.
+* Query the database and return matching vehicles.
+* Run the tests and ensure they pass.
+
+#### Step 3: REFACTOR Phase
+
+* Review the query-building logic for readability and maintainability.
+* Simplify any repetitive code where possible.
+* Verify that all tests continue to pass after refactoring.
+
+### Outcome
+
+Implemented a flexible vehicle search service supporting text-based and price-range filtering while following the TDD workflow.
+## Prompt 14
+
+### Prompt
+
+I need to implement a `purchaseVehicle` service using TDD. The service should decrease the vehicle quantity by one when stock is available and return an error when the vehicle is out of stock or does not exist. Guide me through the implementation process.
+
+### Key Answer
+
+Provided a TDD-based approach for implementing the `purchaseVehicle` service.
+
+#### Step 1: RED Phase
+
+* Create a test file for the `purchaseVehicle` service.
+* Write a test to verify that the vehicle quantity decreases by one after a successful purchase.
+* Write a test to verify that an error is thrown when the vehicle quantity is already zero.
+* Write a test to verify that an error is returned when the vehicle does not exist.
+* Run the tests and confirm they fail initially.
+
+#### Step 2: GREEN Phase
+
+* Create the `purchaseVehicle` service implementation.
+* Validate the supplied vehicle ID.
+* Retrieve the vehicle from the database.
+* Verify that the vehicle exists and has available stock.
+* Decrease the quantity by one and save the updated record.
+* Return an error when stock is unavailable or the vehicle cannot be found.
+* Run the tests and ensure they pass.
+
+#### Step 3: REFACTOR Phase
+
+* Review the implementation for clarity and maintainability.
+* Simplify any unnecessary logic.
+* Verify that all tests continue to pass after refactoring.
+
+### Outcome
+
+Implemented vehicle purchase functionality with inventory validation and stock management while following the TDD workflow.
+
+## Prompt 15
+
+### Prompt
+
+I need to implement a `restockVehicle` service using TDD. The service should increase a vehicle's quantity by a specified amount and return an error when the amount is invalid or the vehicle does not exist. Guide me through the implementation process.
+
+### Key Answer
+
+Provided a TDD-based approach for implementing the `restockVehicle` service.
+
+#### Step 1: RED Phase
+
+* Create a test file for the `restockVehicle` service.
+* Write a test to verify that vehicle quantity increases by the specified amount.
+* Write tests to verify that errors are thrown for negative, zero, decimal, or non-numeric quantities.
+* Write a test to verify that an error is returned when the vehicle does not exist.
+* Run the tests and confirm they fail initially.
+
+#### Step 2: GREEN Phase
+
+* Create the `restockVehicle` service implementation.
+* Validate the supplied vehicle ID.
+* Validate that the restock quantity is a positive whole number.
+* Retrieve the vehicle from the database.
+* Increase the vehicle quantity and save the updated record.
+* Return appropriate errors for invalid quantities or missing vehicles.
+* Run the tests and ensure they pass.
+
+#### Step 3: REFACTOR Phase
+
+* Review the implementation for readability and maintainability.
+* Simplify validation logic where appropriate.
+* Verify that all tests continue to pass after refactoring.
+
+### Outcome
+
+Implemented vehicle restocking functionality with quantity validation and inventory updates while following the TDD workflow.
+
+
+
 
 
 
