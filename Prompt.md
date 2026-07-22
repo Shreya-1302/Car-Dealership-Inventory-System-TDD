@@ -181,4 +181,34 @@ Generated the basic authentication layer consisting of:
 
 Established the authentication routing and controller structure, providing the entry points for registration and login functionality.
 
+## Prompt 8
+
+### Prompt
+
+Explain how to build middleware for authentication and authorization, and guide me through the implementation process step by step.
+
+### Key Answer
+
+Outlined the implementation of middleware responsible for securing protected routes.
+
+#### Step 1: Authentication Middleware (`src/middleware/authMiddleware.js`)
+
+* Retrieve the token from the request's `Authorization` header.
+* Ensure the token uses the `Bearer <token>` convention.
+* Validate the token using `jwt.verify()` and the application's secret key.
+* Store the decoded user information in `req.user`.
+* Proceed to the next middleware using `next()`.
+* Return a `401 Unauthorized` response when the token is absent or invalid.
+
+#### Step 2: Authorization Middleware (`src/middleware/adminMiddleware.js`)
+
+* Access the authenticated user information from `req.user`.
+* Confirm that the user's role is `admin`.
+* Allow the request to continue if the role check passes.
+* Return a `403 Forbidden` response when the user lacks sufficient permissions.
+
+### Outcome
+
+Defined the authentication and role-based authorization middleware required to secure protected and admin-only routes.
+
 
