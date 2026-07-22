@@ -463,6 +463,53 @@ Provided a TDD-based approach for implementing the `restockVehicle` service.
 ### Outcome
 
 Implemented vehicle restocking functionality with quantity validation and inventory updates while following the TDD workflow.
+## Prompt 16
+
+### Prompt
+
+I need to create integration tests for my authentication and vehicle APIs using Supertest. The tests should verify complete request flows, route protection, role-based access control, and CRUD operations. Guide me through implementing the integration tests following the TDD approach.
+
+### Key Answer
+
+Provided a TDD-based approach for implementing integration tests for authentication and vehicle routes.
+
+#### Step 1: Authentication Route Integration Tests
+
+* Create integration tests for user registration and login endpoints.
+* Verify that a user can register successfully.
+* Verify that a registered user can log in and receive a JWT token.
+* Use the token to access a protected route.
+* Confirm that authenticated requests are processed successfully.
+
+#### Step 2: Vehicle Route Integration Tests
+
+* Create integration tests for all vehicle-related endpoints.
+* Verify that requests without a valid token return `401 Unauthorized`.
+* Test vehicle creation with valid and invalid input data.
+* Test retrieval of all vehicles.
+* Test vehicle search functionality with query parameters.
+* Test vehicle update operations for valid vehicle IDs.
+* Test vehicle deletion and confirm admin-only access restrictions.
+* Test vehicle purchase functionality and inventory updates.
+* Test vehicle restocking functionality and admin authorization rules.
+
+#### Step 3: Test Environment Setup
+
+* Use MongoDB Memory Server to provide an isolated test database.
+* Use Supertest to simulate HTTP requests against the Express application.
+* Generate JWT tokens for user and admin roles.
+* Reset database state before each test to ensure consistency.
+
+#### Step 4: REFACTOR Phase
+
+* Organize tests into logical route groups.
+* Remove duplication by sharing setup logic where possible.
+* Verify that all integration tests continue to pass after refactoring.
+
+### Outcome
+
+Implemented comprehensive integration tests covering authentication flows, protected routes, role-based authorization, vehicle management operations, and API behavior using Supertest and an in-memory database.
+
 
 
 
