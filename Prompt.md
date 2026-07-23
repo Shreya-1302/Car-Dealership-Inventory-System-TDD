@@ -509,6 +509,41 @@ Provided a TDD-based approach for implementing integration tests for authenticat
 ### Outcome
 
 Implemented comprehensive integration tests covering authentication flows, protected routes, role-based authorization, vehicle management operations, and API behavior using Supertest and an in-memory database.
+## Prompt 17
+
+### Prompt
+
+Help me set up authentication state management in React using Context API. The context should store user and token information, handle login and registration requests, persist authentication data in localStorage, and provide a logout mechanism. Also explain how to integrate the provider into the application.
+
+### Key Answer
+
+Provided guidance for implementing authentication state management using React Context API.
+
+#### Step 1: Create `AuthContext.jsx`
+
+* Create an authentication context to store user and token state.
+* Initialize authentication data from localStorage when the application loads.
+* Implement a login function that sends credentials to the backend API and stores the returned token.
+* Implement a registration function that communicates with the backend registration endpoint.
+* Implement a logout function that clears authentication data from both state and localStorage.
+* Expose authentication-related values and functions through the context provider.
+
+#### Step 2: Manage User Information
+
+* Decode the JWT token to access user-related information.
+* Store decoded user details in application state.
+* Keep user state synchronized with authentication status.
+
+#### Step 3: Wrap the Application
+
+* Import the `AuthProvider` into the application's entry file.
+* Wrap the root application component with the provider.
+* Make authentication state and functions accessible throughout the component tree.
+
+### Outcome
+
+Implemented centralized authentication management using React Context API with login, registration, logout, token persistence, and application-wide access to authentication data.
+
 
 
 
