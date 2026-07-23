@@ -656,6 +656,38 @@ Provided guidance for implementing the vehicle dashboard and purchase workflow.
 ### Outcome
 
 Implemented a vehicle dashboard with navigation, responsive vehicle listings, inventory-aware purchase controls, and real-time quantity updates after purchases.
+## Prompt 21
+
+### Prompt
+
+Help me implement a search and filter interface for the vehicle dashboard. Users should be able to filter vehicles by make, model, category, and price range, with the dashboard fetching matching results from the backend.
+
+### Key Answer
+
+Provided guidance for implementing vehicle search and filtering functionality.
+
+#### Step 1: Create `SearchBar.jsx`
+
+* Add input fields for make, model, category, minimum price, and maximum price.
+* Manage filter values using component state.
+* Pass selected filters through an `onSearch` callback.
+
+#### Step 2: Integrate with `DashboardPage.jsx`
+
+* Receive filter values from the search component.
+* Send a request to the vehicle search endpoint using query parameters.
+* Update the displayed vehicle list with matching results.
+
+#### Step 3: Improve User Experience
+
+* Keep filters synchronized with user input.
+* Display filtered results without reloading the page.
+* Handle empty search results gracefully.
+
+### Outcome
+
+Implemented a search and filter interface that allows users to find vehicles based on multiple criteria and dynamically updates the dashboard with matching results.
+
 
 
 

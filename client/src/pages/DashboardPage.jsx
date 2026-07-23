@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axiosClient from '../api/axiosClient';
 import VehicleCard from '../components/VehicleCard';
+import SearchBar from '../components/SearchBar';
 
 const DashboardPage = () => {
   const [vehicles, setVehicles] = useState([]);
@@ -21,6 +22,25 @@ const DashboardPage = () => {
       setVehicles(response.data);
     } catch (err) {
       setError(err.response?.data?.error || err.message || 'Failed to fetch vehicles');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Handle vehicle search
+  const handleSearch = async (filters) => {
+    setLoading(true);
+    setError('');
+    try {
+      if (Object.keys(filters).length === 0) {
+        const response = await axiosClient.get('/vehicles');
+        setVehicles(response.data);
+        return;
+      }
+      const response = await axiosClient.get('/vehicles/search', { params: filters });
+      setVehicles(response.data);
+    } catch (err) {
+      setError(err.response?.data?.error || err.message || 'Search failed');
     } finally {
       setLoading(false);
     }
@@ -77,6 +97,9 @@ const DashboardPage = () => {
             Refresh List
           </button>
         </div>
+
+        {/* Search Bar */}
+        <SearchBar onSearch={handleSearch} />
 
         {/* Alerts */}
         {error && (
