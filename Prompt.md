@@ -688,6 +688,40 @@ Provided guidance for implementing vehicle search and filtering functionality.
 
 Implemented a search and filter interface that allows users to find vehicles based on multiple criteria and dynamically updates the dashboard with matching results.
 
+## Prompt 22
+
+### Prompt
+
+Help me build an admin dashboard for vehicle management. I need a reusable vehicle form that supports both adding and editing vehicles, along with an admin page where authorized users can manage inventory, restock vehicles, and remove existing records.
+
+### Key Answer
+
+Provided guidance for implementing the admin vehicle management interface.
+
+#### Step 1: Create `VehicleForm.jsx`
+
+* Build a reusable form for vehicle details.
+* Add fields for make, model, category, price, and quantity.
+* Support both add and edit modes using an optional `initialValues` prop.
+* Submit form data through a reusable `onSubmit` callback.
+
+#### Step 2: Create `AdminPage.jsx`
+
+* Restrict access using the admin-only protected route.
+* Display a list of available vehicles.
+* Add controls for editing, deleting, and restocking inventory.
+* Include a section for adding new vehicles using the reusable form component.
+
+#### Step 3: Manage Vehicle Operations
+
+* Connect form submissions to the appropriate API endpoints.
+* Update the displayed vehicle list after successful actions.
+* Handle API errors and user feedback.
+
+### Outcome
+
+Implemented an admin dashboard with reusable vehicle forms and inventory management capabilities including add, edit, delete, and restock operations.
+
 
 
 

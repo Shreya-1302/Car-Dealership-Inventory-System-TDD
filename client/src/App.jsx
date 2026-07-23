@@ -6,11 +6,11 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
-import Admin from './pages/Admin';
+import AdminPage from './pages/AdminPage';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-gray-55 flex flex-col">
       <Navbar />
       <div className="flex-grow">
         <Routes>
@@ -33,7 +33,7 @@ function App() {
             path="/admin"
             element={
               <ProtectedRoute adminOnly={true}>
-                <Admin />
+                <AdminPage />
               </ProtectedRoute>
             }
           />
