@@ -616,6 +616,47 @@ Provided guidance for implementing authentication pages in React.
 ### Outcome
 
 Implemented login and registration pages that integrate with the authentication context, support user authentication workflows, handle errors, and redirect users after successful actions.
+## Prompt 20
+
+### Prompt
+
+Help me build the vehicle dashboard for the frontend. I need a navigation bar, reusable vehicle cards, and a dashboard page that fetches vehicles, displays them in a responsive layout, and supports purchasing vehicles with real-time quantity updates.
+
+### Key Answer
+
+Provided guidance for implementing the vehicle dashboard and purchase workflow.
+
+#### Step 1: Create `Navbar.jsx`
+
+* Display the application name and navigation links.
+* Show login or logout actions based on the current authentication state.
+* Integrate navigation with the authentication context.
+
+#### Step 2: Create `VehicleCard.jsx`
+
+* Display vehicle information including make, model, category, price, and available quantity.
+* Add a purchase button for each vehicle.
+* Disable the purchase button when quantity reaches zero.
+* Apply visual styling to indicate unavailable inventory.
+
+#### Step 3: Create `DashboardPage.jsx`
+
+* Fetch vehicle data from the backend when the page loads.
+* Store the retrieved vehicles in component state.
+* Render vehicles using a responsive grid layout.
+* Use reusable `VehicleCard` components for display.
+
+#### Step 4: Implement Purchase Flow
+
+* Send a purchase request when the purchase button is clicked.
+* Update the vehicle quantity in state after a successful purchase.
+* Refresh the UI without requiring a page reload.
+* Handle API errors appropriately.
+
+### Outcome
+
+Implemented a vehicle dashboard with navigation, responsive vehicle listings, inventory-aware purchase controls, and real-time quantity updates after purchases.
+
 
 
 
