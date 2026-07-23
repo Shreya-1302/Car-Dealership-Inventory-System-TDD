@@ -54,15 +54,15 @@ const VehicleForm = ({ initialValues, onSubmit, onCancel }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5 bg-white p-6 rounded-xl border border-gray-150 shadow-sm max-w-xl mx-auto">
-      <h3 className="text-xl font-bold text-gray-950 border-b border-gray-100 pb-3">
+    <form onSubmit={handleSubmit} className="space-y-5 bg-slate-900 p-6 rounded-2xl max-w-xl mx-auto border-0">
+      <h3 className="text-xl font-bold text-white border-b border-white/10 pb-3">
         {isEditMode ? 'Edit Vehicle Information' : 'Add New Vehicle'}
       </h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Make */}
         <div className="flex flex-col">
-          <label className="text-sm font-semibold text-gray-600 mb-1">Make <span className="text-red-500">*</span></label>
+          <label className="text-sm font-semibold text-indigo-200 mb-1">Make <span className="text-red-400">*</span></label>
           <input
             type="text"
             name="make"
@@ -70,13 +70,13 @@ const VehicleForm = ({ initialValues, onSubmit, onCancel }) => {
             value={formData.make}
             onChange={handleChange}
             placeholder="e.g. Ford, Tesla"
-            className="px-3.5 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="px-3.5 py-2 border-0 bg-white/95 text-gray-900 placeholder-gray-500 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition font-medium"
           />
         </div>
 
         {/* Model */}
         <div className="flex flex-col">
-          <label className="text-sm font-semibold text-gray-600 mb-1">Model <span className="text-red-500">*</span></label>
+          <label className="text-sm font-semibold text-indigo-200 mb-1">Model <span className="text-red-400">*</span></label>
           <input
             type="text"
             name="model"
@@ -84,13 +84,13 @@ const VehicleForm = ({ initialValues, onSubmit, onCancel }) => {
             value={formData.model}
             onChange={handleChange}
             placeholder="e.g. Mustang, Model S"
-            className="px-3.5 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="px-3.5 py-2 border-0 bg-white/95 text-gray-900 placeholder-gray-500 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition font-medium"
           />
         </div>
 
         {/* Category */}
         <div className="flex flex-col">
-          <label className="text-sm font-semibold text-gray-600 mb-1">Category <span className="text-red-500">*</span></label>
+          <label className="text-sm font-semibold text-indigo-200 mb-1">Category <span className="text-red-400">*</span></label>
           <input
             type="text"
             name="category"
@@ -98,13 +98,13 @@ const VehicleForm = ({ initialValues, onSubmit, onCancel }) => {
             value={formData.category}
             onChange={handleChange}
             placeholder="e.g. Sedan, SUV, Electric"
-            className="px-3.5 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="px-3.5 py-2 border-0 bg-white/95 text-gray-900 placeholder-gray-500 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition font-medium"
           />
         </div>
 
         {/* Price */}
         <div className="flex flex-col">
-          <label className="text-sm font-semibold text-gray-600 mb-1">Price ($) <span className="text-red-500">*</span></label>
+          <label className="text-sm font-semibold text-indigo-200 mb-1">Price ($) <span className="text-red-400">*</span></label>
           <input
             type="number"
             name="price"
@@ -114,13 +114,13 @@ const VehicleForm = ({ initialValues, onSubmit, onCancel }) => {
             value={formData.price}
             onChange={handleChange}
             placeholder="e.g. 45000"
-            className="px-3.5 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="px-3.5 py-2 border-0 bg-white/95 text-gray-900 placeholder-gray-500 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition font-medium"
           />
         </div>
 
         {/* Quantity */}
         <div className="flex flex-col sm:col-span-2">
-          <label className="text-sm font-semibold text-gray-600 mb-1">Quantity <span className="text-red-500">*</span></label>
+          <label className="text-sm font-semibold text-indigo-200 mb-1">Quantity <span className="text-red-400">*</span></label>
           <input
             type="number"
             name="quantity"
@@ -130,17 +130,17 @@ const VehicleForm = ({ initialValues, onSubmit, onCancel }) => {
             value={formData.quantity}
             onChange={handleChange}
             placeholder="e.g. 5"
-            className="px-3.5 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="px-3.5 py-2 border-0 bg-white/95 text-gray-900 placeholder-gray-500 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 transition font-medium"
           />
         </div>
       </div>
 
-      <div className="flex justify-end items-center space-x-3 pt-3 border-t border-gray-100">
+      <div className="flex justify-end items-center space-x-3 pt-3 border-t border-white/10">
         {onCancel && (
           <button
             type="button"
             onClick={onCancel}
-            className="px-4 py-2 border border-gray-300 text-gray-700 font-semibold rounded-lg text-sm bg-white hover:bg-gray-50 active:scale-[0.98] transition"
+            className="px-4 py-2 border border-white/20 text-white font-semibold rounded-lg text-sm bg-white/5 hover:bg-white/10 active:scale-[0.98] transition"
           >
             Cancel
           </button>

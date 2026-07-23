@@ -3,8 +3,8 @@ const loginUser = require('../../services/loginuser');
 
 exports.register = async (req, res) => {
     try {
-        const { email, password } = req.body;
-        const user = await registerUser({ email, password });
+        const { email, password, role } = req.body;
+        const user = await registerUser({ email, password, role });
 
         const userResponse = user.toObject();
         delete userResponse.password;

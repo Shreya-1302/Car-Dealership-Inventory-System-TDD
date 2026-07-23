@@ -48,10 +48,10 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const register = async (email, password) => {
+  const register = async (email, password, role) => {
     setLoading(true);
     try {
-      const response = await axiosClient.post('/auth/register', { email, password });
+      const response = await axiosClient.post('/auth/register', { email, password, role });
       return response.data; // Note: Registration doesn't log in automatically in the backend, needs explicit login afterwards or can call login.
     } catch (error) {
       const errorMessage = error.response?.data?.error || error.message || 'Registration failed';
