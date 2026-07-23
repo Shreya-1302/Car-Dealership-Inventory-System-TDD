@@ -543,6 +543,45 @@ Provided guidance for implementing authentication state management using React C
 ### Outcome
 
 Implemented centralized authentication management using React Context API with login, registration, logout, token persistence, and application-wide access to authentication data.
+## Prompt 18
+
+### Prompt
+
+Help me create a reusable `ProtectedRoute` component in React to secure application routes. The component should redirect unauthenticated users to the login page and optionally restrict access to admin-only routes based on the user's role.
+
+### Key Answer
+
+Provided guidance for implementing a route protection component using React Router and authentication context.
+
+#### Step 1: Create `ProtectedRoute.jsx`
+
+* Create a component responsible for controlling access to protected pages.
+* Retrieve authentication data from the `AuthContext`.
+* Check whether a valid authentication token is available.
+
+#### Step 2: Handle Authentication
+
+* Redirect users to the login page when no token is present.
+* Use React Router's `Navigate` component for redirection.
+* Render the requested route content when authentication succeeds.
+
+#### Step 3: Support Role-Based Access
+
+* Accept an optional `adminOnly` prop.
+* Check the authenticated user's role when `adminOnly` is enabled.
+* Prevent access for non-admin users.
+* Allow access only when the user has the required permissions.
+
+#### Step 4: Apply Route Protection
+
+* Wrap protected pages with the `ProtectedRoute` component.
+* Use standard protection for authenticated users.
+* Enable `adminOnly` protection for administrative pages and actions.
+
+### Outcome
+
+Implemented a reusable route protection mechanism that supports both authentication checks and role-based authorization for React application routes.
+
 
 
 
