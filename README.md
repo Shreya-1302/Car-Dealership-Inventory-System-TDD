@@ -122,14 +122,4 @@ For a complete breakdown of integration paths and mock validations, refer to the
 - **Antigravity** (AI Pair Programming Assistant)
 - **Gemini 3.5 Flash** (Medium model)
 
-### Specific Examples of AI Contribution
-- Used **Antigravity** to refactor all React components (Navbar, SearchBar, VehicleCard, VehicleForm, DashboardPage, AdminPage, Home) to match a premium dark-mode glassmorphic theme.
-- Used **Gemini 3.5 Flash** to implement role-based client-side redirects upon login, parsing decoded JWT tokens inside `LoginPage.jsx` to route admins directly to `/admin` instead of the general user `/dashboard`.
-- Used **Antigravity** to configure role toggling checkboxes inside `RegisterPage.jsx` and update `authcontrollers.js` on the Express backend to extract the optional `role` key from request payloads.
-- Used **Antigravity** to scaffold the [seedAdmin.js](server/seedAdmin.js) helper script, permitting quick database administration configurations during developer deployments.
-
-### Reflections & Troubleshooting
-- **Speedup:** Writing boilerplate state properties, structural Tailwind CSS utility structures, Jest API assertions, and backend mock database cleanups was sped up significantly by the assistant.
-- **Double-checking & Corrections:** The AI initially introduced non-standard color classes (such as `bg-red-650`) which were corrected to standard Tailwind codes (`bg-red-600`). We had to double-check that the database schema mappings (`quantity` adjustments) correctly refreshed the UI states across both standard user search blocks and admin panel listings without breaking the React rendering context. Furthermore, we had to adjust the directory paths in the README to match the specific project folder naming conventions (`server` and `client` directories) used in this repository.
-
 *Refer to the full prompts and responses record inside [PROMPTS.md](Prompt.md).*
